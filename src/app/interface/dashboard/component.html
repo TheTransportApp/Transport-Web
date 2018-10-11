@@ -1,0 +1,145 @@
+<div id="user_content">
+  <header>
+    <h2>Dashboard</h2>
+    <p>Willkommen, Herr Reif</p>
+  </header>
+
+  <main id="dashboard">
+    <div class="grid">
+      <div class="column">
+        <div class="con" id="news">
+          <img src="assets/img/lineicons/newspaper.svg" class="title_img" alt="">
+          <h4 class="container_title">Neuigkeiten</h4>
+          <p class="con_description">Aktuelle Infos und Ankündigungen.</p>
+
+          <div class="container_content" *ngFor="let current of this.news">
+            <div class="latest_news centered_head">
+              <img src="assets/img/lineicons/confetti.svg" alt="" class="news_title_img">
+              <h4>{{ current.title }}</h4>
+              <p>{{ current.content }}</p>
+              <p class="author_date">{{ current.footer }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="con" id="support_tickets">
+          <img src="assets/img/lineicons/support.svg" class="title_img" alt="">
+          <h4 class="container_title">Unterstützung</h4>
+          <p class="con_description">Einsehen von aktuellen Support-Tickets.</p>
+
+          <div class="container_content">
+            <a href="ticket.php">
+              <img src="assets/img/lineicons/hiring.svg" alt="">
+              <div class="ticket_information">
+                <h4>Lizenz nach wenigen Tagen ungültig.</h4>
+                <p>Letzte Antwort am 29.06.2018, 01:44 von Marcel Reif</p>
+                <div class="status_indicator active">
+                  <i></i>
+                  <p>Aktiv</p>
+                </div>
+              </div>
+            </a>
+            <a href="ticket.php">
+              <img src="assets/img/lineicons/hiring.svg" alt="">
+              <div class="ticket_information">
+                <h4>Rechnung noch nicht erhalten.</h4>
+                <p>Letzte Antwort am 26.06.2018, 13:12 von Marcel Reif</p>
+                <div class="status_indicator closed">
+                  <i></i>
+                  <p>Geschlossen</p>
+                </div>
+              </div>
+            </a>
+            <a href="ticket.php">
+              <img src="assets/img/lineicons/hiring.svg" alt="">
+              <div class="ticket_information">
+                <h4>Download-Link funktioniert nicht.</h4>
+                <p>Letzte Antwort am 29.06.2018, 18:52 von Marcel Reif</p>
+                <div class="status_indicator pending">
+                  <i></i>
+                  <p>Auf Antwort warten</p>
+                </div>
+              </div>
+            </a>
+            <a href="ticket.php">
+              <img src="assets/img/lineicons/hiring.svg" alt="">
+              <div class="ticket_information">
+                <h4>Feedback und Vorschläge.</h4>
+                <p>Letzte Antwort am 21.06.2018, 14:33 von Marcel Reif</p>
+                <div class="status_indicator feedback">
+                  <i></i>
+                  <p>Feedback</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <a class="btn blue small">ticket öffnen</a>
+        </div>
+      </div>
+      <div class="column">
+        <div class="con" id="licenses">
+          <img src="assets/img/lineicons/certificate.svg" class="title_img" alt="">
+          <h4 class="container_title">Lizenzen</h4>
+          <p class="con_description">Aktive Lizenzen auf diesem Account.</p>
+
+          <div class="container_content">
+            <a href="licenses.pp">
+              <img src="assets/img/lineicons/resume.svg" alt="">
+              <div class="license_information">
+                <h4>#8273 vom 29.06.2018</h4>
+                <p>Erworben von Marcel Reif für 6,99€ einmalig</p>
+                <table>
+                  <tr>
+                    <td>Gekauft am</td>
+                    <td>29.06.2018</td>
+                  </tr>
+                  <tr>
+                    <td>Zugelassen für</td>
+                    <td>Diesen Account</td>
+                  </tr>
+                  <tr>
+                    <td>Kaufpreis</td>
+                    <td>6,99€ einmalig</td>
+                  </tr>
+                </table>
+                <div class="status_indicator active">
+                  <i></i>
+                  <p>Aktiv</p>
+                </div>
+              </div>
+            </a>
+            <a href="licenses.pp">
+              <img src="assets/img/lineicons/resume.svg" alt="">
+              <div class="license_information">
+                <h4>#1763 vom 29.06.2018</h4>
+                <p>Erworben von Marcel Reif für 6,99€ einmalig</p>
+                <table>
+                  <tr>
+                    <td>Gekauft am</td>
+                    <td>29.06.2018</td>
+                  </tr>
+                  <tr>
+                    <td>Zugelassen für</td>
+                    <td>Diesen Account</td>
+                  </tr>
+                  <tr>
+                    <td>Kaufpreis</td>
+                    <td>6,99€ einmalig</td>
+                  </tr>
+                </table>
+                <div class="status_indicator pending">
+                  <i></i>
+                  <p>Wird bearbeitet</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <a class="btn blue small" href="">lizenz erwerben</a>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26.799 24.495">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #0e77ff;
+      }
+    </style>
+  </defs>
+  <g id="folder" transform="translate(0 -22.007)">
+    <g id="Gruppe_28" data-name="Gruppe 28" transform="translate(8.139 35.406)">
+      <g id="Gruppe_27" data-name="Gruppe 27" transform="translate(0 0)">
+        <path id="Pfad_13" data-name="Pfad 13" class="cls-1" d="M165.5,277.994h-9.474a.523.523,0,1,0,0,1.047H165.5a.523.523,0,1,0,0-1.047Z" transform="translate(-155.5 -277.994)"/>
+      </g>
+    </g>
+    <g id="Gruppe_30" data-name="Gruppe 30" transform="translate(8.139 37.918)">
+      <g id="Gruppe_29" data-name="Gruppe 29">
+        <path id="Pfad_14" data-name="Pfad 14" class="cls-1" d="M163.351,325.993h-7.328a.523.523,0,1,0,0,1.047h7.328a.523.523,0,0,0,0-1.047Z" transform="translate(-155.5 -325.993)"/>
+      </g>
+    </g>
+    <g id="Gruppe_32" data-name="Gruppe 32" transform="translate(17.582 37.918)">
+      <g id="Gruppe_31" data-name="Gruppe 31">
+        <path id="Pfad_15" data-name="Pfad 15" class="cls-1" d="M336.433,325.993h-.006a.523.523,0,1,0,0,1.047h.006a.523.523,0,1,0,0-1.047Z" transform="translate(-335.904 -325.993)"/>
+      </g>
+    </g>
+    <g id="Gruppe_34" data-name="Gruppe 34" transform="translate(12.808 32.789)">
+      <g id="Gruppe_33" data-name="Gruppe 33">
+        <path id="Pfad_16" data-name="Pfad 16" class="cls-1" d="M245.224,228h-.007a.523.523,0,1,0,0,1.047h.007a.523.523,0,0,0,0-1.047Z" transform="translate(-244.694 -227.995)"/>
+      </g>
+    </g>
+    <g id="Gruppe_36" data-name="Gruppe 36" transform="translate(5.129 32.789)">
+      <g id="Gruppe_35" data-name="Gruppe 35">
+        <path id="Pfad_17" data-name="Pfad 17" class="cls-1" d="M112.76,228h-4.805a.523.523,0,0,0,0,1.047h4.805a.734.734,0,0,1,.733.733v5.234a.734.734,0,0,1-.733.733H99.78a.734.734,0,0,1-.733-.733v-5.234a.734.734,0,0,1,.733-.733H104.4a.523.523,0,1,0,0-1.047H99.78a1.782,1.782,0,0,0-1.78,1.78v5.234a1.782,1.782,0,0,0,1.78,1.78H112.76a1.782,1.782,0,0,0,1.78-1.78v-5.234A1.782,1.782,0,0,0,112.76,228Z" transform="translate(-98 -227.995)"/>
+      </g>
+    </g>
+    <g id="Gruppe_38" data-name="Gruppe 38" transform="translate(0 22.007)">
+      <g id="Gruppe_37" data-name="Gruppe 37" transform="translate(0 0)">
+        <path id="Pfad_18" data-name="Pfad 18" class="cls-1" d="M24.6,24.955H22.878a.525.525,0,0,0-.093.009l-1.208-2.643a.523.523,0,0,0-.694-.258L14.52,24.971a.524.524,0,0,0-.126-.016H10.551L8.16,22.188a.524.524,0,0,0-.4-.181H2.2a2.2,2.2,0,0,0-2.2,2.2V44.3a2.2,2.2,0,0,0,2.2,2.2H24.6a2.2,2.2,0,0,0,2.2-2.2V27.154A2.2,2.2,0,0,0,24.6,24.955Zm-3.758-1.723,2.119,4.636H10.7Zm-19.8.973A1.153,1.153,0,0,1,2.2,23.054H7.524l2.391,2.767a.524.524,0,0,0,.4.181h1.953L8.181,27.869H2.2a2.185,2.185,0,0,0-1.152.327ZM25.752,31.2V44.3A1.153,1.153,0,0,1,24.6,45.455H2.2A1.153,1.153,0,0,1,1.047,44.3V30.067A1.153,1.153,0,0,1,2.2,28.915H8.268l.024,0,.033,0H24.6a1.153,1.153,0,0,1,1.152,1.152Zm0-3a2.185,2.185,0,0,0-1.152-.327h-.488L23.259,26H24.6a1.153,1.153,0,0,1,1.152,1.152Z" transform="translate(0 -22.007)"/>
+      </g>
+    </g>
+  </g>
+</svg>

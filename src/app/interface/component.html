@@ -1,0 +1,50 @@
+<div id="open_sidebar">
+  <div class="menu_bar"></div>
+  <div class="menu_bar" id="invisible"></div>
+  <div class="menu_bar"></div>
+</div>
+
+<div id="user_sidebar">
+  <img src="assets/img/logo.png" alt="Transport" id="logo">
+  <main>
+    <h5>kundeninterface</h5>
+    <h2>Willkommen</h2>
+
+    <ul>
+      <li>
+        <a routerLink="/dashboard" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+          <img src="assets/img/lineicons/speedometer.svg" alt="">
+          Dashboard
+        </a>
+      </li>
+      <li>
+        <a routerLink="/dashboard/licences" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+          <img src="assets/img/lineicons/folder.svg" alt="">
+          Meine Lizenzen
+        </a>
+      </li>
+      <li>
+        <a routerLink="/dashboard/beta" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+          <img src="assets/img/lineicons/coding.svg" alt="">
+          Beta Zugänge
+        </a>
+      </li>
+      <li>
+        <a routerLink="/dashboard/settings" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+          <img src="assets/img/lineicons/settings.svg" alt="">
+          Einstellungen
+        </a>
+      </li>
+      <li>
+        <a routerLink="/dashboard/administration" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+          <img src="assets/img/lineicons/data.svg" alt="">
+          Administration
+        </a>
+      </li>
+    </ul>
+  </main>
+
+  <a id="sign_out" class="btn blue" (click)="logout()">Abmelden</a>
+</div>
+
+<router-outlet></router-outlet>

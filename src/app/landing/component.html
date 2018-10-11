@@ -1,0 +1,66 @@
+<div id="user_interaction">
+  <img src="assets/img/logo.png" alt="Transport" id="logo">
+  <main class="visible">
+    <h5>willkommen bei</h5>
+    <h1>Transport</h1>
+
+    <p>Dateiübertragung - schnell, performant, plattformübergreifend und gutaussehend. Überzeuge dich von
+      Transport.</p>
+
+    <a class="btn white modal_trigger" (click)="this.showTestModal()">testen</a>
+    <a class="btn blue" routerLink="/register">jetzt kaufen</a>
+  </main>
+
+  <a id="open_login" routerLink="/login"><i>Klicke hier</i>, um Dich anzumelden.</a>
+</div>
+
+<div id="user_preview">
+  <img class="preview_image" src="assets/img/preview_1.png" alt="">
+  <div class="preview_information">
+    <h2>Dateiübertragung mit Eleganz</h2>
+    <p>Verwalte mit Transport Deinen Server und übertrage Dateien über etliche Protokolle hinweg.</p>
+  </div>
+</div>
+
+<div class="modal" *ngIf="this.testModal">
+  <div class="content medium">
+    <img src="assets/img/lineicons/close.svg" alt="" class="close" (click)="this.closeTestModal()">
+
+    <div class="centered_head">
+      <img src="assets/img/lineicons/think.svg" alt="" class="content_title_image"><br>
+      <h3>Transport App testen</h3>
+      <p>Überzeuge Dich selbst von Transport. Lade die Anwendung noch heute und teste sie für 30 Tage
+        ausgiebig.</p>
+    </div>
+
+    <h4>Gültigkeit</h4>
+    <p>Mit dieser Software-Lizenz hast Du die Möglichkeit, Transport für 30 Tage zu testen. Diese Lizenz
+      verfällt nach dem angegebenen Zeitraum automatisch. Ein erneutes Testen ist nach dem Verfallen der
+      Lizenz nicht mehr möglich.</p>
+
+    <h4>Bitte beachte</h4>
+    <p>Mit der Nutzung einer Testversion stimmst Du folgenden Vereinbarungen zu:</p>
+    <ul>
+      <li>Ich nehme keine unerlaubten Veränderungen oder Modifikationen an der Software und am Quellcode
+        vor.
+      </li>
+      <li>Ich nehme keine Veränderungen an meiner Softwareumgebung vor, um das Verhalten von Transport
+        gezielt zu verändern.
+      </li>
+      <li>Ich gebe meine Aktivierungs-Lizenz nicht an Dritte weiter und verwende diese lediglich für mich
+        und eigene Zwecke sowie Interessen.
+      </li>
+      <li>Ich habe das Recht auf Einsicht und Löschung meiner angegebenen und übermittelten
+        Informationen.
+      </li>
+    </ul>
+
+    <h4>Download</h4>
+    <form>
+      <input type="checkbox" id="accept_agreement" required>
+      <label for="accept_agreement" class="checkbox">Ich habe die oben angeführten Vereinbarungen gelesen
+        und akzeptiere diese.</label>
+      <button class="btn blue">herunterladen</button>
+    </form>
+  </div>
+</div>

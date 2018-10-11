@@ -1,0 +1,25 @@
+<div class="login-loading" *ngIf="this.submitted"><img src="assets/img/lineicons/login.svg"/></div>
+<div id="user_interaction">
+  <p *ngIf="error">{{ error }}</p>
+  <img src="assets/img/logo.png" alt="Transport" id="logo">
+  <form [formGroup]="form" (ngSubmit)="login()">
+    <h5>Anmelden</h5>
+    <h1>Transport</h1>
+
+    <p>Willkommen. Melde Dich an, um Transport optimal nutzen zu können.</p>
+
+    <input type="email" name="user_email" placeholder="Deine E-Mailadresse" formControlName="email">
+    <input type="password" name="user_password" placeholder="Dein Passwort" formControlName="password">
+    <input type="checkbox" name="stay_signedin" id="stay_signedin">
+    <label for="stay_signedin" class="checkbox">Angemeldet bleiben</label>
+    <button type="submit" class="btn blue">Anmelden</button>
+  </form>
+</div>
+
+<div id="user_preview">
+  <img class="preview_image" src="assets/img/preview_1.png" alt="">
+  <div class="preview_information">
+    <h2>Dateiübertragung mit Eleganz</h2>
+    <p>Verwalte mit Transport Deinen Server und übertrage Dateien über etliche Protokolle hinweg.</p>
+  </div>
+</div>

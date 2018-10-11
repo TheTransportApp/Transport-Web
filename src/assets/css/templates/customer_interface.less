@@ -1,0 +1,331 @@
+#user_sidebar {
+  width: 370px;
+  height: 100%;
+  background: white;
+  position: fixed;
+  left: 0;
+  top: 0;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.04);
+  padding: 65px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  #logo {
+    width: 200px;
+    height: auto;
+    display: block;
+    margin-bottom: 55px;
+  }
+
+  #sign_out {
+    position: absolute;
+    bottom: 65px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  ul {
+    margin: 35px 0 0 0;
+    padding: 0;
+
+    li {
+      margin: 20px 0;
+      -webkit-transition: .3s;
+      -moz-transition: .3s;
+      -ms-transition: .3s;
+      -o-transition: .3s;
+      transition: .3s;
+      cursor: pointer;
+
+      &:hover {
+        margin-left: 10px;
+      }
+
+      &:before {
+        display: none;
+      }
+
+      a {
+        font-weight: 500;
+        font-size: 15px;
+        height: 28px;
+        display: block;
+
+        &.active {
+          &:hover {
+            margin-left: 0;
+          }
+
+          a {
+            color: #001D2F;
+          }
+
+          img {
+            filter: none;
+            opacity: 1;
+          }
+        }
+
+        img {
+          height: 24px;
+          width: 24px;
+          vertical-align: middle;
+          margin: -2px 15px 0 0;
+          filter: brightness(0);
+          opacity: .5;
+        }
+      }
+    }
+  }
+}
+
+#user_content {
+  width: calc(100% - 370px);
+  float: right;
+  height: 100%;
+  padding: 65px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  header {
+    margin-bottom: 45px;
+  }
+
+  main {
+    height: calc(~'100% - 132px');
+
+    &#dashboard {
+      .grid {
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        margin: 0 -15px;
+
+        .column {
+          margin: 0 15px;
+
+          .con {
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, .02);
+            padding: 25px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            margin: 0 0 45px 0;
+            position: relative;
+
+            .scrollable_content {
+              max-height: calc(~'100vh - 380px');
+              overflow-y: auto;
+            }
+
+            .title_img {
+              width: 32px;
+              height: 32px;
+              padding: 15px;
+              border-radius: 5px;
+              background: #0E77FF;
+              margin: -50px 0 15px 0;
+              box-shadow: 0 5px 15px rgba(14, 119, 255, .3);
+            }
+
+            &#news {
+              .news_title_img {
+                height: 48px;
+                width: 48px;
+                margin-bottom: 15px;
+              }
+
+              .author_date {
+                font-size: 13px;
+                color: #001D2F;
+                opacity: .5;
+                margin-bottom: 0;
+                line-height: 10px;
+              }
+            }
+
+            &#support_tickets {
+
+            }
+          }
+        }
+      }
+
+      .con_description {
+        margin-top: 0;
+      }
+
+      .container_title {
+        font-size: 14px;
+        font-weight: 600;
+        position: absolute;
+        top: 27px;
+        right: 25px;
+        line-height: 0;
+      }
+
+      .status_indicator {
+        &.active {
+          @keyframes active_highlight {
+            0% {box-shadow: 0 0 10px rgba(46, 213, 115,0)}
+            50% {box-shadow: 0 0 10px rgba(46, 213, 115,1)}
+            100% {box-shadow: 0 0 10px rgba(46, 213, 115,0)}
+          }
+
+          i {
+            border: 2px #2ed573 solid;
+            animation: active_highlight 2s infinite ease;
+          }
+        }
+
+        &.closed {
+          i {
+            border: 2px #ff4757 solid;
+          }
+        }
+
+        &.pending {
+          i {
+            border: 2px #ff7f50 solid;
+          }
+        }
+
+        &.feedback {
+          i {
+            border: 2px #5352ed solid;
+          }
+        }
+
+        i {
+          width: 8px;
+          height: 8px;
+          border-radius: 100px;
+          display: inline-block;
+          margin: 0 5px 0 0;
+          position: relative;
+          top: 1px;
+        }
+
+        p {
+          margin: 0;
+          display: inline-block;
+        }
+      }
+
+      #support_tickets {
+        img {
+          width: 32px;
+          height: auto;
+          display: inline-block;
+          margin-right: 15px;
+          vertical-align: top;
+        }
+
+        a {
+          margin-bottom: 15px;
+          display: block;
+
+          &.btn {
+            display: inline-block;
+          }
+
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+        }
+
+        .ticket_information {
+          width: calc(~'100% - 52px');
+          display: inline-block;
+          vertical-align: top;
+
+          h4 {
+            margin-bottom: 0;
+          }
+
+          p {
+            font-size: 14px;
+            margin: 5px 0 0 0;
+          }
+        }
+      }
+
+      #licenses {
+        img {
+          width: 32px;
+          height: auto;
+          display: inline-block;
+          margin-right: 15px;
+          vertical-align: top;
+        }
+
+        a {
+          margin-bottom: 15px;
+          display: block;
+
+          &.btn {
+            display: inline-block;
+          }
+
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+        }
+
+        .license_information {
+          width: calc(~'100% - 52px');
+          display: inline-block;
+          vertical-align: top;
+
+          h4 {
+            margin-bottom: 0;
+          }
+
+          p {
+            font-size: 14px;
+            margin: 5px 0 0 0;
+          }
+        }
+
+        table {
+          td {
+            font-size: 13px;
+            color: #A8A9B1;
+            padding-right: 10px;
+          }
+        }
+      }
+    }
+
+    &#license_management {
+      .grid {
+        grid-template-columns: 25% 25% 25% 25%;
+      }
+
+      #modify_license {
+        button {
+          margin-top: 5px;
+        }
+      }
+    }
+
+    &#beta_access {
+      .grid {
+        grid-template-columns: 25% 25% 25% 25%;
+      }
+
+      #enter_beta-phase {
+        .grid {
+          grid-template-columns: 50% 50%;
+
+          p {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,133 @@
+<div id="purchase_software" class="modal light">
+  <div class="purchase_content large" *ngIf="step == 1">
+    <img src="assets/img/lineicons/close.svg" alt="" class="close" (click)="close()">
+
+    <img src="assets/img/lineicons/confetti.svg" class="content_title_image" alt=""><br>
+    <div class="centered_head">
+      <h3>Transport kaufen</h3>
+      <p>Wow! Du bist hammer!<br>Dieser Assistent wird dich beim Kauf von Transport unterstützen. Schließe
+        das Fenster bei Ladevorgängen nicht. Du kannst vor der Transaktion deinen kompletten Kauf
+        rückgängig machen, indem du auf "Abbrechen" klickst.</p>
+    </div>
+
+    <h4>Informationen vor dem Kauf</h4>
+    <p>Dieser Assistent wird Dich durch mehrere Schritte führen. Sofern Du dich kurzfristig umentscheidest,
+      kannst du den Vorgang jederzeit abbrechen. Du wirst durch folgende Prozessschritte geleitet.</p>
+    <ul>
+      <li>Registrierung eines Benutzerkontos</li>
+      <li>Anmelden im Benutzerkonto</li>
+      <li>Hinterlegen der Zahlungsinformationen</li>
+      <li>Durchführung der Transaktion</li>
+      <li>Zuweisung der Lizenz mit anschließendem Download der Software</li>
+    </ul>
+    <p>Nachdem der Kauf abgeschlossen ist erhälst du eine E-Mail mit deinen Kaufinformationen. Anschließend
+      kannst du Transport laden und installieren.</p>
+
+    <h4>Lass' und beginnen!</h4>
+    <p>Zuerst wird ein Profil für Dich angelegt. Dies dient dem Zweck, dass du deinen Lizenzschlüssel
+      einsehen und die Software jederzeit laden kannst.</p>
+
+    <a class="btn blue" (click)="next()">Profil erstellen</a>
+  </div>
+
+  <div class="purchase_content medium" *ngIf="step == 2">
+    <img src="assets/img/lineicons/close.svg" alt="" class="close" (click)="close()">
+
+    <img src="assets/img/lineicons/user.svg" alt="" class="content_title_image"><br>
+    <div class="centered_head">
+      <h3>Erstellung Deines Profils</h3>
+      <p>In diesem Schritt erstellst Du Dein Profil, in dem du deine Lizenzen einsehen und dir Transport
+        herunterladen kannst.</p>
+    </div>
+    <form>
+      <div class="flex">
+        <h4>Persönliche Informationen</h4>
+        <p>Erzähl' uns zuerst, wer Du bist.</p>
+        <div class="row">
+          <div class="con con1">
+            <input type="text" name="prename" placeholder="Dein Vorname" v-model="user_info.first_name">
+          </div>
+          <div class="con con1">
+            <input type="text" name="lastname" placeholder="Dein Nachame" v-model="user_info.last_name">
+          </div>
+        </div>
+        <div class="row">
+          <div class="con con1">
+            <input type="date" name="birthday" placeholder="Dein Geburtstag" v-model="user_info.birthday">
+          </div>
+          <div class="con con1">
+            <input type="email" name="email" placeholder="Deine E-Mailadresse" v-model="user_info.email">
+          </div>
+        </div>
+        <div class="row">
+          <div class="con con1">
+            <input type="text" name="street" placeholder="Straße" v-model="user_info.street">
+          </div>
+          <div class="con con1">
+            <input type="text" name="house_nr" placeholder="Hausnummer" v-model="user_info.street_number">
+          </div>
+          <div class="con con1">
+            <input type="number" name="zip_code" placeholder="Postleitzahl" v-model="user_info.zip_code">
+          </div>
+          <div class="con con1">
+            <input type="text" name="city" placeholder="Ort" v-model="user_info.city">
+          </div>
+        </div>
+
+        <h4>Anmeldeinformationen</h4>
+        <p>Nun die Daten, mit denen Du dich im Kundeninterface anmelden wirst.</p>
+        <div class="row">
+          <div class="con con1">
+            <input type="password" name="password_confirm" placeholder="Dein Passwort" v-model="user_info.password">
+          </div>
+          <div class="con con1">
+            <input type="password" name="password" placeholder="Bestätige Dein Passwort" v-model="user_info.password_repeat">
+          </div>
+        </div>
+
+        <button type="button" class="btn blue" (click)="next()">Weiter</button>
+      </div>
+    </form>
+
+    <a class="step_backwards" (click)="back()">Einen Schritt zurück</a>
+  </div>
+
+  <div class="purchase_content small" *ngIf="step == 3">
+    <img src="assets/img/lineicons/close.svg" alt="" class="close" (click)="close()">
+
+    <img src="assets/img/lineicons/method.svg" alt="" class="content_title_image"><br>
+    <div class="centered_head">
+      <h3>Zahlungsmethode</h3>
+      <p>Wähle aus, wie du bezahlen willst. Du wirst anschließend zum gewählten Zahlungsdienstleister
+        weitergeleitet, um die Transaktion dort abzuschließen.</p>
+    </div>
+    <form>
+      <input type="radio" name="payment_methods" id="paypal">
+      <label for="paypal" class="radio">PayPal</label>
+
+      <input type="radio" name="payment_methods" id="klarna">
+      <label for="klarna" class="radio">Klarna (SOFORT)</label>
+
+      <input type="radio" name="payment_methods" id="credit_card">
+      <label for="credit_card" class="radio">Kreditkarte</label>
+
+      <input type="radio" name="payment_methods" id="sepa">
+      <label for="sepa" class="radio">SEPA Überweisung</label>
+
+      <div id="paypal-button"></div>
+
+      <button type="button" class="btn blue" (click)="next()">weiter</button>
+    </form>
+
+    <a class="step_backwards" (click)="back()">Einen Schritt zurück</a>
+  </div>
+
+  <div class="purchase_content small" *ngIf="step == 4">
+    <img src="assets/img/lineicons/loading.svg" alt="" class="content_title_image"><br>
+    <div class="centered_head">
+      <h3>Du wirst weitergeleitet</h3>
+      <p>Du wirst in wenigen Momenten zum ausgewählten Zahlungsdienstleister weitergeleitet.</p>
+      <a class="btn blue">angaben korrigieren</a>
+    </div>
+  </div>
+</div>
