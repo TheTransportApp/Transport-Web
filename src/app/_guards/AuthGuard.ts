@@ -9,7 +9,7 @@ export class AuthGuard implements CanActivate {
 
   canActivate(next: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
     console.log(this.cookieService.get('token'));
-    if (this.cookieService.get('token') !== undefined) {
+    if (this.cookieService.check('token')) {
       return true;
     }
 

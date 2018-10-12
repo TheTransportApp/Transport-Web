@@ -30,6 +30,11 @@ export class TicketService {
         observer.next([]);
         observer.onComplete();
       });
+    }, error => {
+      return Observable.create(observer => {
+        observer.next([]);
+        observer.onComplete();
+      });
     });
   }
 

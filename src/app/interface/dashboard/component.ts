@@ -11,7 +11,7 @@ export class DashboardComponent {
   public news: Array<{ title: string, content: string, footer: string }>;
   public tickets: Array<{ title: string }>;
 
-  constructor(ticketService: TicketService) {
+  constructor(public ticketService: TicketService) {
     this.news = [
       {
         title: '100 Beta-Anmelder erreicht!',
@@ -21,7 +21,12 @@ export class DashboardComponent {
         footer: 'Marcel Reif, 28.06.2018'
       }
     ];
-    ticketService.getAllTickets().subscribe(value => {
+
+    this.getTickets();
+  }
+
+  getTickets() {
+    this.ticketService.getAllTickets().subscribe(value => {
 
     });
   }
